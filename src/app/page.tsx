@@ -72,7 +72,7 @@ export default function Home() {
             </p>
             <Link
               href="/book"
-              className="inline-block px-10 py-4 bg-[hsl(var(--gold))] text-black font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button hover:scale-105"
+              className="inline-block px-10 py-4 bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button hover:scale-105"
             >
               Book Appointment
             </Link>
@@ -119,7 +119,7 @@ export default function Home() {
               </p>
               <Link
                 href="/about"
-                className="inline-block px-8 py-3 bg-transparent border-2 border-[hsl(var(--gold))] text-gold font-semibold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--gold))] hover:text-black transition-all"
+                className="inline-block px-8 py-3 bg-transparent border-2 border-[hsl(var(--gold))] text-gold font-semibold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--gold))] hover:text-[hsl(var(--charcoal))] transition-all"
               >
                 Learn More
               </Link>
@@ -156,13 +156,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/book"
-              className="px-10 py-4 bg-[hsl(var(--gold))] text-black font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button"
+              className="px-10 py-4 bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button"
             >
               Book Appointment
             </Link>
             <Link
               href="/contact"
-              className="px-10 py-4 bg-transparent border-2 border-[hsl(var(--gold))] text-gold font-semibold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--gold))] hover:text-black transition-all"
+              className="px-10 py-4 bg-transparent border-2 border-[hsl(var(--gold))] text-gold font-semibold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--gold))] hover:text-[hsl(var(--charcoal))] transition-all"
             >
               Contact Us
             </Link>

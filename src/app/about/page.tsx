@@ -181,7 +181,7 @@ export default function About() {
 
               <Link
                 href="/book"
-                className="inline-block px-10 py-4 bg-[hsl(var(--gold))] text-black font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button"
+                className="inline-block px-10 py-4 bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button"
               >
                 Book Your Appointment
               </Link>
