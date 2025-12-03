@@ -1,16 +1,35 @@
 import { Clock, DollarSign } from 'lucide-react';
+import Image from 'next/image';
 
 interface ServiceCardProps {
   title: string;
   duration: string;
   price: string;
   description?: string;
+  backgroundImage?: string;
 }
 
-export function ServiceCard({ title, duration, price, description }: ServiceCardProps) {
+export function ServiceCard({ title, duration, price, description, backgroundImage }: ServiceCardProps) {
   return (
-    <div className="bg-[hsl(var(--charcoal))] border border-[hsl(var(--gold))] rounded p-8 hover:shadow-md transition-all duration-300 hover:scale-[1.02] group">
-      <div className="text-center">
+    <div className="relative bg-[hsl(var(--charcoal))] border border-[hsl(var(--gold))] rounded overflow-hidden p-8 hover:shadow-md transition-all duration-300 hover:scale-[1.02] group">
+      {/* Background Image with Overlay */}
+      {backgroundImage && (
+        <>
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={backgroundImage}
+              alt={title}
+              fill
+              className="object-cover"
+            />
+          </div>
+          {/* Dark overlay for text readability - darker on hover */}
+          <div className="absolute inset-0 bg-black/70 group-hover:bg-black/60 transition-all duration-300 z-0" />
+        </>
+      )}
+
+      {/* Content - positioned above background */}
+      <div className="relative z-10 text-center">
         <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-gold transition-colors">
           {title}
         </h3>

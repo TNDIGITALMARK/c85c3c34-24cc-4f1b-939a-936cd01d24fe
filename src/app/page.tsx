@@ -11,31 +11,36 @@ const services = [
     title: 'CLASSIC CUT',
     duration: '30 minutes',
     price: '$35',
-    description: 'Traditional haircut with precision styling and finishing touches'
+    description: 'Traditional haircut with precision styling and finishing touches',
+    backgroundImage: '/generated/classic-cut-bg.png'
   },
   {
     title: 'BEARD TRIM',
     duration: '20 minutes',
     price: '$25',
-    description: 'Expert beard shaping and grooming for a clean, sharp look'
+    description: 'Expert beard shaping and grooming for a clean, sharp look',
+    backgroundImage: '/generated/beard-trim-bg.png'
   },
   {
     title: 'FULL SERVICE',
     duration: '45 minutes',
     price: '$55',
-    description: 'Complete haircut and beard trim package with hot towel treatment'
+    description: 'Complete haircut and beard trim package with hot towel treatment',
+    backgroundImage: '/generated/full-service-bg.png'
   },
   {
     title: 'HOT TOWEL SHAVE',
     duration: '25 minutes',
     price: '$40',
-    description: 'Classic straight razor shave with hot towel and premium products'
+    description: 'Classic straight razor shave with hot towel and premium products',
+    backgroundImage: '/generated/hot-towel-shave-bg.png'
   },
   {
     title: 'FATHER & SON',
     duration: '60 minutes',
     price: '$65',
-    description: 'Special package for father and son, creating memories together'
+    description: 'Special package for father and son, creating memories together',
+    backgroundImage: '/generated/father-son-bg.png'
   }
 ];
 
@@ -94,6 +99,7 @@ export default function Home() {
                 duration={service.duration}
                 price={service.price}
                 description={service.description}
+                backgroundImage={service.backgroundImage}
               />
             ))}
           </div>
