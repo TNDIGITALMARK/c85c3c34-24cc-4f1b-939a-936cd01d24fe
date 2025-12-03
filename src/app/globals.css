@@ -261,6 +261,17 @@ a:hover {
   color: hsl(var(--light-gold));
 }
 
+/* Exception: Links with gold backgrounds need dark text for readability */
+a.bg-\[hsl\(var\(--gold\)\)\],
+a[class*="bg-[hsl(var(--gold))]"] {
+  color: hsl(var(--charcoal)) !important;
+}
+
+a.bg-\[hsl\(var\(--gold\)\)\]:hover,
+a[class*="bg-[hsl(var(--gold))]:hover"] {
+  color: hsl(var(--black)) !important;
+}
+
 /* ============================================
    BUTTON STYLES (DEFAULT)
    ============================================ */
@@ -335,4 +346,13 @@ input:focus, textarea:focus, select:focus {
 
 .border-gold {
   border-color: hsl(var(--gold));
+}
+
+/* Gold Button Text Override - Dark Gray for Readability */
+.gold-button-text {
+  color: hsl(var(--charcoal)) !important;
+}
+
+.gold-button-text:hover {
+  color: hsl(var(--black)) !important;
 }

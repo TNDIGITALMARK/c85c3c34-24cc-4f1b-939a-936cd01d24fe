@@ -52,7 +52,7 @@ export function ServiceCard({ title, duration, price, description, backgroundIma
           </div>
         </div>
 
-        <button className="mt-4 px-6 py-2 bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] font-semibold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-colors shadow-button">
+        <button className="mt-4 px-6 py-2 bg-[hsl(var(--gold))] gold-button-text font-semibold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-colors shadow-button">
           Book Now
         </button>
       </div>

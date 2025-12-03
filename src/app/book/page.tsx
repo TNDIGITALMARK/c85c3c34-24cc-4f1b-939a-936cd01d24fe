@@ -57,7 +57,7 @@ export default function BookAppointment() {
       <section className="py-16 px-6 lg:px-12 bg-[hsl(var(--background))]">
         <div className="max-w-5xl mx-auto">
           {submitted && (
-            <div className="mb-8 p-6 bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] rounded-lg text-center">
+            <div className="mb-8 p-6 bg-[hsl(var(--gold))] gold-button-text rounded-lg text-center">
               <h3 className="text-xl font-bold mb-2">Appointment Request Received!</h3>
               <p className="text-sm">We'll confirm your booking shortly via phone or email.</p>
             </div>
@@ -78,7 +78,7 @@ export default function BookAppointment() {
                     onClick={() => setSelectedService(service.name)}
                     className={`p-6 rounded border-2 transition-all text-left ${
                       selectedService === service.name
-                        ? 'bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] border-[hsl(var(--gold))]'
+                        ? 'bg-[hsl(var(--gold))] gold-button-text border-[hsl(var(--gold))]'
                         : 'bg-[hsl(var(--charcoal))] text-white border-[hsl(var(--gold))] hover:bg-[hsl(var(--dark-gray))]'
                     }`}
                   >
@@ -121,7 +121,7 @@ export default function BookAppointment() {
                     onClick={() => setSelectedTime(time)}
                     className={`p-3 rounded border transition-all text-sm font-medium ${
                       selectedTime === time
-                        ? 'bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] border-[hsl(var(--gold))]'
+                        ? 'bg-[hsl(var(--gold))] gold-button-text border-[hsl(var(--gold))]'
                         : 'bg-[hsl(var(--charcoal))] text-white border-[hsl(var(--gold))] hover:bg-[hsl(var(--dark-gray))]'
                     }`}
                   >
@@ -197,7 +197,7 @@ export default function BookAppointment() {
               <button
                 type="submit"
                 disabled={!selectedService || !selectedDate || !selectedTime}
-                className="px-12 py-4 bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-12 py-4 bg-[hsl(var(--gold))] gold-button-text font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Confirm Appointment
               </button>
@@ -218,7 +218,7 @@ export default function BookAppointment() {
           </p>
           <a
             href="tel:2815558289"
-            className="inline-block px-10 py-4 bg-transparent border-2 border-[hsl(var(--gold))] text-gold font-semibold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--gold))] hover:text-[hsl(var(--charcoal))] transition-all"
+            className="inline-block px-10 py-4 bg-transparent border-2 border-[hsl(var(--gold))] text-gold font-semibold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--gold))] hover:gold-button-text transition-all"
           >
             Call (281) 555-KUTZ
           </a>

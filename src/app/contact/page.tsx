@@ -115,7 +115,7 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-white mb-8">Send a Message</h2>
 
               {submitted && (
-                <div className="mb-6 p-4 bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] rounded-lg">
+                <div className="mb-6 p-4 bg-[hsl(var(--gold))] gold-button-text rounded-lg">
                   <p className="font-semibold">Message sent successfully!</p>
                   <p className="text-sm">We'll get back to you soon.</p>
                 </div>
@@ -185,7 +185,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button"
+                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[hsl(var(--gold))] gold-button-text font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button"
                 >
                   <Send size={20} />
                   Send Message

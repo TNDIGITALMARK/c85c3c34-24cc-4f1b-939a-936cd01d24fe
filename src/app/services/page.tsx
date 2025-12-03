@@ -204,7 +204,7 @@ export default function Services() {
           </p>
           <Link
             href="/book"
-            className="inline-block px-12 py-4 bg-[hsl(var(--gold))] text-[hsl(var(--charcoal))] font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button hover:scale-105"
+            className="inline-block px-12 py-4 bg-[hsl(var(--gold))] gold-button-text font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button hover:scale-105"
           >
             Book Appointment
           </Link>
