@@ -21,6 +21,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ando Kutz - Premium Barbershop in Louisville, KY",
   description: "Experience premium barbering services with Andy Vu in Louisville, Kentucky. Book your appointment for expert cuts, beard trims, and traditional grooming.",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+    viewportFit: 'cover',
+  },
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#1a1a1a' },
+    { media: '(prefers-color-scheme: light)', color: '#1a1a1a' },
+  ],
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Ando Kutz',
+  },
+  formatDetection: {
+    telephone: true,
+    date: true,
+    address: true,
+    email: true,
+  },
 };
 
 export default function RootLayout({

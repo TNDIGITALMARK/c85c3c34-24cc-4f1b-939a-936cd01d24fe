@@ -42,47 +42,47 @@ export default function BookAppointment() {
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-6 lg:px-12 mt-20 bg-[hsl(var(--charcoal))]">
+      {/* Hero Section - Mobile Optimized */}
+      <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 mt-16 md:mt-20 bg-[hsl(var(--charcoal))]">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-4">Book Your Appointment</h1>
-          <div className="w-24 h-1 bg-[hsl(var(--gold))] mx-auto mb-6"></div>
-          <p className="text-[hsl(var(--light-gray))] text-lg">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">Book Your Appointment</h1>
+          <div className="w-20 sm:w-24 h-1 bg-[hsl(var(--gold))] mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-[hsl(var(--light-gray))] text-base sm:text-lg px-4">
             Select your service, choose your time, and experience premium grooming
           </p>
         </div>
       </section>
 
-      {/* Booking Form Section */}
-      <section className="py-16 px-6 lg:px-12 bg-[hsl(var(--background))]">
+      {/* Booking Form Section - Mobile Optimized */}
+      <section className="py-10 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-12 bg-[hsl(var(--background))]">
         <div className="max-w-5xl mx-auto">
           {submitted && (
-            <div className="mb-8 p-6 bg-[hsl(var(--gold))] gold-button-text rounded-lg text-center">
-              <h3 className="text-xl font-bold mb-2">Appointment Request Received!</h3>
+            <div className="mb-6 sm:mb-8 p-5 sm:p-6 bg-[hsl(var(--gold))] gold-button-text rounded-lg text-center">
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Appointment Request Received!</h3>
               <p className="text-sm">We'll confirm your booking shortly via phone or email.</p>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
             {/* Service Selection */}
             <div>
-              <label className="flex items-center gap-2 text-white font-semibold text-lg mb-4">
-                <Clock className="text-gold" size={24} />
+              <label className="flex items-center gap-2 text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">
+                <Clock className="text-gold" size={20} />
                 Select Service
               </label>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 {services.map((service) => (
                   <button
                     key={service.name}
                     type="button"
                     onClick={() => setSelectedService(service.name)}
-                    className={`p-6 rounded border-2 transition-all text-left ${
+                    className={`p-5 sm:p-6 rounded-lg border-2 transition-all text-left touch-manipulation min-h-[88px] ${
                       selectedService === service.name
                         ? 'bg-[hsl(var(--gold))] gold-button-text border-[hsl(var(--gold))]'
-                        : 'bg-[hsl(var(--charcoal))] text-white border-[hsl(var(--gold))] hover:bg-[hsl(var(--dark-gray))]'
+                        : 'bg-[hsl(var(--charcoal))] text-white border-[hsl(var(--gold))] active:bg-[hsl(var(--dark-gray))] md:hover:bg-[hsl(var(--dark-gray))]'
                     }`}
                   >
-                    <h3 className="font-semibold mb-2">{service.name}</h3>
+                    <h3 className="font-semibold mb-2 text-base">{service.name}</h3>
                     <div className="text-sm opacity-80">
                       <p>{service.duration}</p>
                       <p className="font-bold mt-1">{service.price}</p>
@@ -94,35 +94,35 @@ export default function BookAppointment() {
 
             {/* Date Selection */}
             <div>
-              <label className="flex items-center gap-2 text-white font-semibold text-lg mb-4">
-                <Calendar className="text-gold" size={24} />
+              <label className="flex items-center gap-2 text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">
+                <Calendar className="text-gold" size={20} />
                 Select Date
               </label>
               <input
                 type="date"
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}
-                className="w-full p-4 bg-[hsl(var(--charcoal))] text-white border-2 border-[hsl(var(--gold))] rounded focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]"
+                className="w-full p-4 bg-[hsl(var(--charcoal))] text-white border-2 border-[hsl(var(--gold))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))] text-base min-h-[52px] touch-manipulation"
                 required
               />
             </div>
 
             {/* Time Slot Selection */}
             <div>
-              <label className="flex items-center gap-2 text-white font-semibold text-lg mb-4">
-                <Clock className="text-gold" size={24} />
+              <label className="flex items-center gap-2 text-white font-semibold text-base sm:text-lg mb-3 sm:mb-4">
+                <Clock className="text-gold" size={20} />
                 Select Time
               </label>
-              <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3">
                 {timeSlots.map((time) => (
                   <button
                     key={time}
                     type="button"
                     onClick={() => setSelectedTime(time)}
-                    className={`p-3 rounded border transition-all text-sm font-medium ${
+                    className={`p-3 sm:p-3.5 rounded-lg border-2 transition-all text-sm font-medium touch-manipulation min-h-[48px] ${
                       selectedTime === time
                         ? 'bg-[hsl(var(--gold))] gold-button-text border-[hsl(var(--gold))]'
-                        : 'bg-[hsl(var(--charcoal))] text-white border-[hsl(var(--gold))] hover:bg-[hsl(var(--dark-gray))]'
+                        : 'bg-[hsl(var(--charcoal))] text-white border-[hsl(var(--gold))] active:bg-[hsl(var(--dark-gray))] md:hover:bg-[hsl(var(--dark-gray))]'
                     }`}
                   >
                     {time}
@@ -132,10 +132,10 @@ export default function BookAppointment() {
             </div>
 
             {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
-                <label className="flex items-center gap-2 text-white font-semibold mb-3">
-                  <User className="text-gold" size={20} />
+                <label className="flex items-center gap-2 text-white font-semibold mb-3 text-sm sm:text-base">
+                  <User className="text-gold" size={18} />
                   Full Name
                 </label>
                 <input
@@ -143,13 +143,13 @@ export default function BookAppointment() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="Your full name"
-                  className="w-full p-4 bg-[hsl(var(--charcoal))] text-white border border-[hsl(var(--gold))] rounded focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]"
+                  className="w-full p-4 bg-[hsl(var(--charcoal))] text-white border-2 border-[hsl(var(--gold))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))] text-base min-h-[52px] touch-manipulation"
                   required
                 />
               </div>
               <div>
-                <label className="flex items-center gap-2 text-white font-semibold mb-3">
-                  <Phone className="text-gold" size={20} />
+                <label className="flex items-center gap-2 text-white font-semibold mb-3 text-sm sm:text-base">
+                  <Phone className="text-gold" size={18} />
                   Phone Number
                 </label>
                 <input
@@ -157,15 +157,15 @@ export default function BookAppointment() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="(281) 555-1234"
-                  className="w-full p-4 bg-[hsl(var(--charcoal))] text-white border border-[hsl(var(--gold))] rounded focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]"
+                  className="w-full p-4 bg-[hsl(var(--charcoal))] text-white border-2 border-[hsl(var(--gold))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))] text-base min-h-[52px] touch-manipulation"
                   required
                 />
               </div>
             </div>
 
             <div>
-              <label className="flex items-center gap-2 text-white font-semibold mb-3">
-                <Mail className="text-gold" size={20} />
+              <label className="flex items-center gap-2 text-white font-semibold mb-3 text-sm sm:text-base">
+                <Mail className="text-gold" size={18} />
                 Email Address
               </label>
               <input
@@ -173,14 +173,14 @@ export default function BookAppointment() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="your.email@example.com"
-                className="w-full p-4 bg-[hsl(var(--charcoal))] text-white border border-[hsl(var(--gold))] rounded focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]"
+                className="w-full p-4 bg-[hsl(var(--charcoal))] text-white border-2 border-[hsl(var(--gold))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))] text-base min-h-[52px] touch-manipulation"
                 required
               />
             </div>
 
             <div>
-              <label className="flex items-center gap-2 text-white font-semibold mb-3">
-                <MessageSquare className="text-gold" size={20} />
+              <label className="flex items-center gap-2 text-white font-semibold mb-3 text-sm sm:text-base">
+                <MessageSquare className="text-gold" size={18} />
                 Additional Notes (Optional)
               </label>
               <textarea
@@ -188,20 +188,20 @@ export default function BookAppointment() {
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                 placeholder="Any special requests or preferences?"
                 rows={4}
-                className="w-full p-4 bg-[hsl(var(--charcoal))] text-white border border-[hsl(var(--gold))] rounded focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))] resize-none"
+                className="w-full p-4 bg-[hsl(var(--charcoal))] text-white border-2 border-[hsl(var(--gold))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))] resize-none text-base touch-manipulation"
               />
             </div>
 
             {/* Submit Button */}
-            <div className="text-center pt-6">
+            <div className="text-center pt-4 sm:pt-6">
               <button
                 type="submit"
                 disabled={!selectedService || !selectedDate || !selectedTime}
-                className="px-12 py-4 bg-[hsl(var(--gold))] gold-button-text font-bold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--light-gold))] transition-all shadow-button disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full sm:w-auto px-10 sm:px-12 py-4 bg-[hsl(var(--gold))] gold-button-text font-bold text-sm uppercase tracking-wide rounded-lg hover:bg-[hsl(var(--light-gold))] transition-all shadow-button disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation min-h-[52px]"
               >
                 Confirm Appointment
               </button>
-              <p className="text-[hsl(var(--light-gray))] text-sm mt-4">
+              <p className="text-[hsl(var(--light-gray))] text-sm mt-4 px-4">
                 You'll receive a confirmation call or email within 24 hours
               </p>
             </div>
@@ -209,16 +209,16 @@ export default function BookAppointment() {
         </div>
       </section>
 
-      {/* Contact Info Section */}
-      <section className="py-16 px-6 lg:px-12 bg-[hsl(var(--charcoal))]">
+      {/* Contact Info Section - Mobile Optimized */}
+      <section className="py-10 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-12 bg-[hsl(var(--charcoal))]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Prefer to Call?</h2>
-          <p className="text-[hsl(var(--light-gray))] text-lg mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Prefer to Call?</h2>
+          <p className="text-[hsl(var(--light-gray))] text-base sm:text-lg mb-6 px-4">
             Call us directly to book your appointment or ask any questions
           </p>
           <a
             href="tel:2815558289"
-            className="inline-block px-10 py-4 bg-transparent border-2 border-[hsl(var(--gold))] text-gold font-semibold text-sm uppercase tracking-wide rounded hover:bg-[hsl(var(--gold))] hover:gold-button-text transition-all"
+            className="inline-block w-full sm:w-auto px-8 sm:px-10 py-4 bg-transparent border-2 border-[hsl(var(--gold))] text-gold font-semibold text-sm uppercase tracking-wide rounded-lg hover:bg-[hsl(var(--gold))] hover:gold-button-text transition-all touch-manipulation min-h-[52px] flex items-center justify-center max-w-md mx-auto"
           >
             Call (281) 555-KUTZ
           </a>
