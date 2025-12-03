@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Ando Kutz - Premium Barbershop in Louisville, KY",
+  description: "Experience premium barbering services with Andy Vu in Louisville, Kentucky. Book your appointment for expert cuts, beard trims, and traditional grooming.",
 };
 
 export default function RootLayout({
